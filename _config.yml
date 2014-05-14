@@ -1,6 +1,6 @@
 markdown: rdiscount
 permalink: /:year/:month/:title/
 url: http://wentaotang.github.io
-author: wentao
+author: 文韬
 pygments: true
 paginate: 24
