@@ -1,8 +1,7 @@
 <section class="comment">
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-   
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+<!-- UY END -->
 </section>
 

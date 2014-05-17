@@ -6,6 +6,7 @@ categories:
 tags:
 - Java内存模型
 ---
+一直在学习【深入理解Java虚拟机JVM高级特性与最佳实践】,记录下学习日志。
 
 ##Java内存模型包括：
 > * 程序计数器(Program Counter Register)
