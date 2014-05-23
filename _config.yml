@@ -1,8 +1,21 @@
-markdown: rdiscount
+markdown: redcarpet
+safe: true
+lsi: false
+auto: true
 permalink: /:year/:month/:title/
 url: http://wentaotang.github.io
 author: 文韬
 pygments: true
 paginate: 24
+
+
+redcarpet:
+extensions:
+- with_toc_data
+- hard_wrap
+- no_intra_emphasis
+- tables
+- fenced_code_blocks
+- autolink
 
 
