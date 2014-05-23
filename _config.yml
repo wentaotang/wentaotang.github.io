@@ -6,6 +6,3 @@ pygments: true
 paginate: 24
 
 
-
-rdiscount:
-  extensions: ['fenced_code_blocks']
