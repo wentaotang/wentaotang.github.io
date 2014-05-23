@@ -1,7 +1,4 @@
-markdown: kramdown
-markdown_ext:  markdown,mkdown,mkdn,mkd,md
-textile_ext:   textile
-excerpt_separator: "\n\n"
+markdown: rdiscount
 permalink: /:year/:month/:title/
 url: http://wentaotang.github.io
 author: 文韬
@@ -11,16 +8,4 @@ paginate: 24
 
 
 rdiscount:
-  extensions: []
-
-redcarpet:
-  extensions: []
-
-
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
+  extensions: ['fenced_code_blocks']
