@@ -1,4 +1,4 @@
-markdown: pygments
+markdown: rdiscount
 auto: true
 permalink: /:year/:month/:title/
 url: http://wentaotang.github.io
