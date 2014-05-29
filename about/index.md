@@ -4,10 +4,15 @@ layout: page
 comments: yes
 ---
   
-唐文韬, 一名80后程序员，目前从事java web 开发的相关工作。
+欢迎大家来到我的博客，我是唐文韬   
 
-潜心练技升级打怪中.....，对java 多线程，并发，jvm感兴趣    
-偶尔也涉猎Python，Django    
+
+一个在帝都工作的程序员    
+
+爱生活、爱一切美好的事物   
+
+希望将来能用自己所学做自己想做的事情，不为生存，只为更好的生活
+
 
 个人邮箱:wentao_tang@126.com    
 github : [https://github.com/wentaotang](https://github.com/wentaotang)      
