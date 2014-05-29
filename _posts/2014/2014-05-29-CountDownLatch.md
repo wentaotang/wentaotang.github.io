@@ -9,27 +9,31 @@ tags:
 
 CountDownLatch，在我初次接触这个类的时候，确实是有些迷茫，自己也在网上找了很多的资料，但始终是处于一种似懂非懂的状态。
 
-CountDownLatch的javadoc：
+CountDownLatch的javadoc：   
+
 /**
  * A synchronization aid that allows one or more threads to wait until
  * a set of operations being performed in other threads completes.
- */
+ */   
+
 大意是允许`一个或多个`线程等待直到其他N个线程的一系列操作完成。感觉还是有些别扭。
 
 在看完徐明明的这篇blog：
 http://xumingming.sinaapp.com/215/countdownlatch-vs-cyclicbarrier/
 后，我感觉讲到点子上了，侧重点不一样。
 
-那我们就以代码来展示下CountDownLatch的用法：
-适用场景：通俗的讲就是说我们在做某件事的时候，它的前提条件必须是成立的，，否则这事没法做.只能等待。等待前提条件成立，再执行。
-下面我们来模拟下去医院看病的情形吧。
-大致流程是这样的：
+那我们就以代码来展示下CountDownLatch的用法:  
 
- 1. 排队(帝都人比较多，大家懂的)
+适用场景：通俗的讲就是说我们在做某件事的时候，它的前提条件必须是成立的，，否则这事没法做.只能等待。等待前提条件成立，再执行。   
+下面我们来模拟下去医院看病的情形吧。   
+大致流程是这样的：   
+
+ 1. 排队(帝都人比较多，大家懂的) 
  2. 挂号
  3. 通知看病（等待叫号）
  
-我参考了一个blog的代码，只是我暂时找不到那个链接了，后面找到了我就一定补上。
+我参考了一个blog的代码，只是我暂时找不到那个链接了，后面找到了我就一定补上。   
+
 ```java
 import java.util.concurrent.CountDownLatch;
 
@@ -82,7 +86,8 @@ class Service implements Runnable{
         latch.countDown(); 
     }
 }
-```
+```   
+
 运行结果，大家一定觉得有歧义，其实是我这个例子没有举好，
 因为这个3个条件在现实生活中是有依赖关系的，如果大家硬要按流程来办事的话，可以使用join来完成。取消注释就可以了。但是我举这个例子主要是让大家更好的理解CountDownLatch。就是要干某件事的时候，若干前提条件一定要满足(前提条件之间最好没有依赖关系)，这个时候就比较适合采用CounDownLatch来完成。
 
