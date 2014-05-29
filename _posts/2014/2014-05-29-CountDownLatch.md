@@ -32,7 +32,7 @@ http://xumingming.sinaapp.com/215/countdownlatch-vs-cyclicbarrier/
  2. 挂号
  3. 通知看病（等待叫号）
  
-我参考了一个blog的代码，只是我暂时找不到那个链接了，后面找到了我就一定补上。   
+我参考了一个![blog](http://javarevisited.blogspot.com/2012/07/countdownlatch-example-in-java.html)的代码（可能需要翻墙），我稍微修改了下。   
 
 ```java
 import java.util.concurrent.CountDownLatch;
