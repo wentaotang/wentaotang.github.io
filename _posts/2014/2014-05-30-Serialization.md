@@ -7,7 +7,7 @@ tags:
 - Serialization
 ---
 
-原文链接:http://javarevisited.blogspot.sg/2014/05/why-use-serialversionuid-inside-serializable-class-in-java.html#more   
+原文[链接](http://javarevisited.blogspot.sg/2014/05/why-use-serialversionuid-inside-serializable-class-in-java.html#more)   
 
 ###为什么在要在实现了序列化了类中使用SerialVersionUID   
 
