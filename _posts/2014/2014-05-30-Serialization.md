@@ -14,7 +14,7 @@ tags:
 
 序列化和序列化ID让很多java程序员一直很困惑，我经常看见一些类似这样的问题：  
 
-1.什么是SerialVersionUID？
+1.什么是SerialVersionUID？   
 2.如果我不声明SerialVersionUID在实现了Serialization的类中会有什么问题？
 
 
