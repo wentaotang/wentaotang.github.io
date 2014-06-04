@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  CycliBarrier 译文
+title:  CyclicBarrier 译文
 categories:
 - 锁
 tags:
@@ -23,20 +23,20 @@ java.util.concurrent.CyclicBarrier 的同步机制是通过一些算法同步多
 ## 创建一个CyclicBarrier
 
 当你创建一个CyclicBarrier你要指定当等待线程达到多少个的时候，就释放它们。下面教你如何创建一个CyclicBarrier。  
-```java
+```java     
 CyclicBarrier barrier = new CyclicBarrier(2);
 ```   
 
 ## 在屏障处等待
 下面是一个线程在屏障处等待  
-```java
+```java  
 barrier.await();
 ```   
 你也可以为等待的线程指定一个等待的时长，当超过指定的等待时长时，该线程就会被释放，即使还没达到设定的N个等待线程。  
 现实例子(方便理解)：大家进出城门的时候，官府出了个规定：  
 - 城外等待进城的人数到达50人的时候才打开城门。  
 - 城门每个小时开一次，即使没有到达50人，也开。
-```java
+```java   
 barrier.await(1, TimeUnit.HOURS);
 ```
 这些等待的线程会一直在屏障处等待，直到：
@@ -51,13 +51,13 @@ barrier.await(1, TimeUnit.HOURS);
 CyclicBarrier 支持屏障行为(暂这么叫吧)，当最后一个线程到达的时候，该屏障行为就执行。  
 我们可以通过CyclicBarrier的构造函数来运行`屏障行为`   
 
-```java
+```java   
 Runnable      barrierAction = ... ;
 CyclicBarrier barrier       = new CyclicBarrier(2, barrierAction);
 ```   
 
 ## CyclicBarrier 示例
-```java  
+```java    
 Runnable barrier1Action = new Runnable() {
     public void run() {
         System.out.println("BarrierAction 1 executed ");
@@ -82,7 +82,8 @@ new Thread(barrierRunnable1).start();
 new Thread(barrierRunnable2).start();
 ```
 下面是CyclicBarrierRunnable 类：  
-```java
+```java    
+
 public class CyclicBarrierRunnable implements Runnable{
     CyclicBarrier barrier1 = null;
     CyclicBarrier barrier2 = null;
