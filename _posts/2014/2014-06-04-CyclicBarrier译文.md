@@ -124,7 +124,8 @@ public class CyclicBarrierRunnable implements Runnable{
 }
 ```
 
-下面是控制台的输出，有可能Thread-1 和Thread-0 的顺序是不一样的
+下面是控制台的输出，有可能Thread-1 和Thread-0 的顺序是不一样的   
+
 Thread-1 waiting at barrier 1  
 Thread-0 waiting at barrier 1  
 BarrierAction 1 executed   
