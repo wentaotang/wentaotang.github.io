@@ -44,12 +44,14 @@ barrier.await();
 barrier.await(1, TimeUnit.HOURS);
 ```
 
-这些等待的线程会一直在屏障处等待，直到：
+这些等待的线程会一直在屏障处等待，直到:   
+
 - 最后一个线程达到
 - 他线程调用该线程的`interrupt()` 方法
 - 另一个等待的线程被中断
 - 另一个等待的线程等待超时
 - CyclicBarrier.reset() 被一些外部线程调用   
+
 
 ## CyclicBarrier 行为
 
