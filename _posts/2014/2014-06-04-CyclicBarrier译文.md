@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  CycliBarrier 
+title:  CycliBarrier 译文
 categories:
 - 锁
 tags:
