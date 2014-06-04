@@ -38,10 +38,12 @@ barrier.await();
 你也可以为等待的线程指定一个等待的时长，当超过指定的等待时长时，该线程就会被释放，即使还没达到设定的N个等待线程。  
 现实例子(方便理解)：大家进出城门的时候，官府出了个规定：  
 - 城外等待进城的人数到达50人的时候才打开城门。  
-- 城门每个小时开一次，即使没有到达50人，也开。
+- 城门每个小时开一次，即使没有到达50人也开。
+
 ```java
 barrier.await(1, TimeUnit.HOURS);
 ```
+
 这些等待的线程会一直在屏障处等待，直到：
 - 最后一个线程达到
 - 他线程调用该线程的`interrupt()` 方法
@@ -85,7 +87,7 @@ new Thread(barrierRunnable1).start();
 new Thread(barrierRunnable2).start();
 ```
 下面是CyclicBarrierRunnable 类：    
-    
+
 ```java   
 public class CyclicBarrierRunnable implements Runnable{
     CyclicBarrier barrier1 = null;
