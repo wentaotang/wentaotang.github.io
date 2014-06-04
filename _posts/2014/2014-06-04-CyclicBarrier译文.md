@@ -29,7 +29,7 @@ CyclicBarrier barrier = new CyclicBarrier(2);
 ```
 
 ## 在屏障处等待
-下面是一个线程在屏障处等待  
+下面是线程在屏障处等待  
 
 ```java
 barrier.await();
