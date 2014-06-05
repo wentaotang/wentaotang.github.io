@@ -6,6 +6,9 @@ categories:
 tags:
 - java锁
 ---
+
+[原文链接-What is CountDownLatch in Java - Concurrency Example Tutorial](http://javarevisited.blogspot.com/2012/07/countdownlatch-example-in-java.html)
+
 ## CountDownLatch是什么
 
 CountDownLatch在java中是一种同步器，它可以让一个线程在开始执行前等待一个或多个线程。这是一个非常重要的需求，在java服务器端核心应用中经常被用到。而CountDownLatch内置该功能极大的简化了开发工作。CountDownLatch 及其他并发组件比如CyclicBarrier, Semaphore, ConcurrentHashMap and BlockingQueue 都是在java 5中的java.util.concurrent包中引入介绍的。在这篇java并发教程中，我们将了解到CountDownLatch 在java中是干什么的？CountDownLatch 是怎么工作的？以及学习一些CountDownLatch的例子，最后就是CountDownLatch有哪些功能点值得关注。你也可以通过wait 和 notify机制实现CountDownLatch 同样的功能，但是在开始尝试的时候都是棘手的，而且代码量也很大。而通过CountDownLatch实现仅仅只需要几行代码。CountDownLatch允许主线程等待的线程个数是可变的。它可以等待1个或N个线程，而代码实现上没有多少变化的。关键在于：如果你理解了什么是CountDownLatch，CountDownLatch干了些什么，CountDownLatch是怎么工作的，那么你在java应用程序中何时需要使用CountDownLatch并不困难。
