@@ -106,6 +106,7 @@ All services are up, Application is starting now
 
 ### CountDownLatch 注意问题
 几个要点关于CountDownLatch值得我么记住：  
+
 - 你不能重复使用CountDownLatch 的count值一旦它到达0，这个也是CountDownLatch和CyclicBarrier的主要区别，而且在java核心概念的面试和多线程面试中经常被问到。
 - 主线程在门栓（Latch）处的等待通过CountDownLatch的await()方法来实现，而其他线程通过调用CountDownLatch的countDown()方法通知主线程它已完成。
 
@@ -114,6 +115,7 @@ All services are up, Application is starting now
 
 
 本博客其他的java并发例子：
+
 - [When to use ThreadLocal variable in Java](http://javarevisited.blogspot.sg/2012/05/how-to-use-threadlocal-in-java-benefits.html)
 - [Difference between Runnable and Thread in Java](http://javarevisited.blogspot.sg/2012/01/difference-thread-vs-runnable-interface.html)
 - [How to stop Thread in Java](http://javarevisited.blogspot.sg/2011/10/how-to-stop-thread-java-example.html)
