@@ -5,9 +5,11 @@
   <section>
     {% include widgets/contacts_list %}
   </section>
+  <!-- 
   <section>
     {% include widgets/links_list %}
   </section>
+  -->
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
