@@ -4,7 +4,7 @@ title:  java序列化
 categories:
 - Serialization
 tags:
-- Serialization
+- Java序列化
 ---
 
 原文[链接](http://javarevisited.blogspot.sg/2014/05/why-use-serialversionuid-inside-serializable-class-in-java.html#more)   
