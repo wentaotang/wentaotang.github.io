@@ -5,11 +5,7 @@
   <section>
     {% include widgets/contacts_list %}
   </section>
-  <!-- 暂时取消友情链接
-      <section>
-         {% include widgets/links_list %}
-      </section>
-   -->
+  
   
 </div>
 <script type="text/javascript">
