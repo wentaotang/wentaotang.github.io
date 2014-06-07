@@ -1,8 +1,10 @@
 ---
 layout: post
 title:  CountDownLatch在java中是什么
-category:Java并发
-tags:[Java锁]
+categories:
+- Java并发
+tags:
+- Java锁
 ---
 
 [原文链接-What is CountDownLatch in Java - Concurrency Example Tutorial](http://javarevisited.blogspot.com/2012/07/countdownlatch-example-in-java.html)

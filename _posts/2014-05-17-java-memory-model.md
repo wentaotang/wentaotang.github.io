@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Java内存模型-程序计数器
-category:Java内存模型
-tags:[jvm]
+categories:
+- Java内存模型
+tags:
+- jvm
 ---
 一直在学习【深入理解Java虚拟机JVM高级特性与最佳实践】,记录下学习日志。
 
