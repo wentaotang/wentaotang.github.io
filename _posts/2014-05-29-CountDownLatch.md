@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  CountDownLatch 
-categories:
-- 锁
-tags:
-- java锁
+categories:Java并发
+tags:[Java锁]
 ---
 
 CountDownLatch，在我初次接触这个类的时候，确实是有些迷茫，自己也在网上找了很多的资料，但始终是处于一种似懂非懂的状态。

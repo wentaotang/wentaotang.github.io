@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  CyclicBarrier在java中是什么
-categories:
-- 锁
-tags:
-- java锁
+categories:Java并发
+tags:[Java锁]
 ---
 
 [原文链接 What is CyclicBarrier Example in Java 5 – Concurrency Tutorial](http://javarevisited.blogspot.com/2012/07/cyclicbarrier-example-java-5-concurrency-tutorial.html)

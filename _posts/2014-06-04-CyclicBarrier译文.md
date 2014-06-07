@@ -1,10 +1,8 @@
 ---
 layout: post
 title:  CyclicBarrier 译文
-categories:
-- 锁
-tags:
-- java锁
+category:Java并发
+tags:[Java锁]
 ---
 
 [原文地址](http://tutorials.jenkov.com/java-util-concurrent/cyclicbarrier.html)
