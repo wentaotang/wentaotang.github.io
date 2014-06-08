@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Django 安装
+title:  编写你的第一个Django APP
 categories:
 - Django
 tags:
