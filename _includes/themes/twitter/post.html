@@ -8,7 +8,7 @@
     <section>
       <div class="post-extra">
         <div class="pull-left">
-          <span>{{ page.date | date_to_long_string }}</span>
+          <span>{{ page.date | date: "%Y-%m-%d" }}</span>
         </div>
         <div class="pull-right">
           {% include widgets/share_buttons %}
