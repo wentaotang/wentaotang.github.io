@@ -30,7 +30,19 @@ ArrayList和Vector是在Java集合包中经常被用到的类，它们之间的�
 3. **容量**
     每当Vector越过设定的阀值，通过capacityIncrement指定属性值来调整容量，而ArrayList则是通过ensureCapacity()方法来调整容量。
 4. **枚举和迭代器***
-    Vector可以通过elements()方法返回枚举类型的，
+    Vector可以通过elements()方法返回枚举类型的，该方法不是快速失败的，而ArrayList的Iterator和ListIterator则是快速失败的，在我的文章[Iteratro和Enumeration的区别](http://javarevisited.blogspot.sg/2010/10/what-is-difference-between-enumeration.html)详细讨论了它们之间的不同。你也看看看一看
 5. **遗留**
+    另一点值得记住的就是Vector在JDK1.0中就出现了，最初它并不是集合工具类的一部分，实在后面版本的重构中才实现了List接口，才变成了集合中的一部分。
+
+
+    考虑到Vector和ArrayList的这些特点，我的结论就是无论何时你应该使用ArrayList避免使用Vector除非你没有别的选择。如果你有多个线程读写只有少个线程写，你应该仔细考虑CopyOnWriteArrayList而不是Vetcor，因为CopyOnWriteArrayList能提供线程安全且对性能影响不大。
+
+
+     相关的文章:  
+    [Difference between String, StringBuffer and StringBuilder in Java](http://javarevisited.blogspot.com/2011/07/string-vs-stringbuffer-vs-stringbuilder.html)   
+    [Difference between Comparator and Comparable with Example](http://javarevisited.blogspot.com/2011/06/comparator-and-comparable-in-java.html)
+
+    [Difference between hashtable and hashmap in java](http://javarevisited.blogspot.com/2010/10/difference-between-hashmap-and.html)  
+
 
 
