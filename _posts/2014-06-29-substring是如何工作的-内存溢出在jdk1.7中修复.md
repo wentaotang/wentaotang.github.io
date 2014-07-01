@@ -7,7 +7,7 @@ tags:
 - String
 ---
 
-原文链接：[]()
+原文链接：[How SubString method works in Java - Memory Leak Fixed in JDK 1.7](http://javarevisited.blogspot.com/2011/10/how-substring-in-java-works.html)
 
 ## subString是如何工作的-  内存溢出问题在jdk1.7中修复
 
@@ -23,4 +23,7 @@ substring方法是String类最常用的方法之一，在Java字符串面试中�
 
 万一你还没指出它的问题，如果原始的字符串非常长，大概有1GB的大小，无论要截取的子字符串是多么小，它将持有1GB的数组，这也将阻止原字符串无法进行垃圾回收，万一字符串没有任何关联对象了，很明显这会导致内存泄露，内存将保存这个对象即使这个对象已没有用了，这就是为什么substring能产生内存溢出问题。
 
-很显然，面试官下一个问题就是你会怎么处理这个问题？尽管你无法修改substring方法，你还可以做一些其他的工作，
+很显然，面试官下一个问题就是你会怎么处理这个问题？
+
+- 方法一：创建新的字符串： new String(str.substring(2));
+- 方法二：使用intern() : str.substring(2).intern();
