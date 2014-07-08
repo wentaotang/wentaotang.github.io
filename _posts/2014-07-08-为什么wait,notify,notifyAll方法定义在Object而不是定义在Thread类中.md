@@ -17,4 +17,10 @@ tags:
 
 ## 为什么wait，notify，notifyAll方法定义在Object中的理由
 
-这里有一些想法关于为什么它们不应包含在Thread中，我想这个对我有点意义
+这里有一些想法关于为什么它们不应包含在Thread中，我想这个对我有点意义。
+
+1. wait和notify不仅仅是普通的方法或同步的工具，它们更是2个线程之间的通信机制。记住synchronized和wait、notify是2个不同方向，不要因为他们是相同的或类似的就搞混淆。synchroniezd提供互斥并确保Java类的线程安全，而wait、notify是2个线程通信机制。
+2. 锁是基于每个对象的基础上提供的。这就是另外一个wait、notify应在Object而不是Thread中的理由。
+3. 为了进入关键代码段，线程需要等待并获取锁，等待中的线程不知道哪个线程持有锁，相反它们仅知道锁被其他线程持有，它们需要等待锁。而不是知道哪个线程在同步代码块里面，并要求线程释放锁。这个类比证实了wait和notify在Object类而不应该在Thread类中。
+
+上面就是我的观点关于为什么wait、notify方法在Object而不是在Thread中声明。或许你有于我不同的观点。现实中，Java设计者的另一个设计决定像[ not supporting Operator overloading in Java](http://javarevisited.blogspot.com/2011/08/why-java-does-not-support-operator.html),如果你有其他更让人信服的理由，请发帖。
