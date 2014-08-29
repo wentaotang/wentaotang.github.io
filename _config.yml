@@ -110,7 +110,7 @@ JB :
   analytics :
     provider : false
     baidu :
-      tracking_id : 'a7c01c4b55f06cf1df9cabb9b18a65a3' 
+      tracking_id : '3Fbf82a1a79f3b6b657f7aeb6035cb6d1a' 
     google : 
       tracking_id : 'UA-41189818-1'
     getclicky :
