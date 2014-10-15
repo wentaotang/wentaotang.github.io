@@ -10,6 +10,6 @@ comments: false
 
 ## 正在阅读
 
-
+![jvm](http://wentaotang.qiniudn.com/jvm.jpg)
 
 ## 已读 
