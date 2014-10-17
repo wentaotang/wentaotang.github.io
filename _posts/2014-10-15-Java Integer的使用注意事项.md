@@ -8,7 +8,7 @@ tags:
 ---
 
 
-**Integer**类是一个使用频率比较高的类，在使用的过程中，我们应该注意些什么呢？
+**Integer**类是一个使用频率比较高的类，在使用的过程中，我们应该注意些什么呢？  
 
 >**尽量使用Integer.valueof(int),而不是new Integer(int)  
 
