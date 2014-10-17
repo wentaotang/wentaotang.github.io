@@ -14,4 +14,5 @@ comments: false
 
 ## 已读 
 ---
-![java并发](http://wentaotang.qiniudn.com/Java%E5%B9%B6%E5%8F%91.jpg)
+![java并发](http://wentaotang.qiniudn.com/Java%E5%B9%B6%E5%8F%91.jpg)  
+![Java](http://wentaotang.qiniudn.com/effective-java.jpg)  
