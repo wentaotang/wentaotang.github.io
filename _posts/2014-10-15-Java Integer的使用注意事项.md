@@ -60,6 +60,7 @@ int j = low;
 for(int k = 0; k < cache.length; k++)
     cache[k] = new Integer(j++);
 }
+}
 ```
 
 通过代码我们知道该范围的最小值就是-128，最大值默认是127，所以一般默认情况下，low-high的范围就是[-128-127],通过以上的代码我们知道，最小值是不可改变的，但是这个最大值是可以改变的，我们只需要在编译的时候新增系统属性 `java.lang.Integer.IntegerCache.high=<size>`即可，如下所示：  
@@ -69,8 +70,8 @@ for(int k = 0; k < cache.length; k++)
 
 
 **参考文章：**
-http://stackoverflow.com/questions/15052216/how-large-is-the-integer-cache   
-http://stackoverflow.com/questions/3934291/extending-java-integer-cahce
+1.http://stackoverflow.com/questions/15052216/how-large-is-the-integer-cache 
+2.http://stackoverflow.com/questions/3934291/extending-java-integer-cahce
 
 
 
