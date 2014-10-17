@@ -10,7 +10,7 @@ tags:
 
 **Integer**类是一个使用频率比较高的类，在使用的过程中，我们应该注意些什么呢？
 
->** 尽量使用`Integer.valueof(int)`,而不是`new Integer(int)`**.
+>**尽量使用`Integer.valueof(int)`,而不是`new Integer(int)`.
 
 答案是：缓存，我们先来看看如下的代码？
 
@@ -69,7 +69,8 @@ for(int k = 0; k < cache.length; k++)
 `-XX:AutoBoxCacheMax=<size>`  
 
 
-**参考文章：**
+**参考文章：**  
+
 1.http://stackoverflow.com/questions/15052216/how-large-is-the-integer-cache 
 2.http://stackoverflow.com/questions/3934291/extending-java-integer-cahce
 
