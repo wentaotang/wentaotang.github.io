@@ -7,11 +7,11 @@ tags:
 - jaxb
 ---
 
-今天我们来学习@XmlType注解的propOrder属性来控制Xml节点的顺序。也会讨论propOrder属性对@XmlAccessType注解的影响。
+今天来学习@XmlType注解的propOrder属性,改属性控制Xml节点的顺序
 
 ####属性访问(只包括public，不包含private)
 
-当时用属性访问的时候，propOrder的项是和属性意义对应的，而不是和字段对应。
+当时用属性访问的时候，propOrder的项是和属性相对应的(即对应的setter，getter方法)，而不是和字段对应。
 
 ```java 
 @XmlRootElement
