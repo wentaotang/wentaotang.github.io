@@ -8,11 +8,11 @@ comments: false
 {% include JB/setup %}
 
 
-我叫唐文韬，生于86年
 
-一个在帝都工作的Java程序员   
+###人生格言：  
 
-业余的时候鼓捣下Django 
+不求日行千里，只求日拱一卒
+
 
 
 
