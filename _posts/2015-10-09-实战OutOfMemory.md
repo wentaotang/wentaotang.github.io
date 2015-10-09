@@ -37,14 +37,19 @@ while(true){
 虚拟机栈和本地方法栈都是描述的java方法执行的内存模型，每个方法执行的时候都会创建一个栈帧(stack Frame)用于存储局部变量表，操作栈，动态链接，方法出口等信息。   
 ```java  
 int stackLength = 1;
-public void test2(){
+
+@Test
+public void test2() {
     stackLeak();
 }
-public void stackLeak(){
-    stackLength ++;
+
+public void stackLeak() {
+    stackLength++;
     stackLeak();
-}  
+}
 ```
+
+
 
 运行时添加如下jvm参数： -Xss512k -XX:+HeapDumpOnOutOfMemoryError   
 
@@ -61,7 +66,7 @@ while(true){
 }
 ```
 
-因为运行时常亮池是隶属与方法区，在sun的Hotspot虚拟机机上也俗称perm space(永久区)，所以在运行的时候我们需要添加如下jvm参数：   
+因为运行时常量池是隶属于方法区，在sun的Hotspot虚拟机机上也俗称perm space(永久区)，所以在运行的时候我们需要添加如下jvm参数：   
 -XX:PermSize=2m -XX:MaxPermSize=2m -XX:+HeapDumpOnOutOfMemoryError
 
 在控制台上，我们将看到如下输出：  
