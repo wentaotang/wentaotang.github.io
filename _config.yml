@@ -1,139 +1,113 @@
-# This is the default format. 
-# For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink: /post/:title.html
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:      ./_plugins
+layouts_dir:      ./_layouts
+paginate:     8
+gems: [jekyll-paginate]
 
-safe: false
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-auto: true
-paginate: 10
-encoding: utf-8
-pygments: true
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data", "tables"]
+# Handling Reading
+safe:         false
+include:      [".htaccess"]
+exclude:      []
+keep_files:   [".git", ".svn"]
+encoding:     "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+textile_ext:  "textile"
 
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
-title : wentao's blog
-tagline: To be a thoughtful person.
-author :
-  name : wentao
-  email : wentao_tang@126.com
-  github : wentaotang
+# Filtering Content
+show_drafts:  null
+limit_posts:  0
+future:       true
+unpublished:  false
 
-# The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
-# Most places will/should use BASE_PATH to make the urls
-#
-# If you have set a CNAME (pages.github.com) set your custom domain here.
-# Else if you are pushing to username.github.io, replace with your username.
-# Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
-production_url : http://wentaotang.github.io
+# Conversion
+markdown:     kramdown
+highlighter:  pygments
+lsi:          false
+excerpt_separator: "\n\n"
 
-# All Jekyll-Bootstrap specific configurations are namespaced into this hash
-#
-JB :
-  version : 0.3.0
+# Serving
+detach:       false
+port:         4000
+host:         wentaotang.github.io
+baseurl:      "" # does not include hostname
 
-  # All links will be namespaced by BASE_PATH if defined.
-  # Links in your website should always be prefixed with {{BASE_PATH}}
-  # however this value will be dynamically changed depending on your deployment situation.
-  #
-  # CNAME (http://yourcustomdomain.com)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Pages (http://username.github.io)
-  #   DO NOT SET BASE_PATH 
-  #   (urls will be prefixed with "/" and work relatively)
-  #
-  # GitHub Project Pages (http://username.github.io/project-name)
-  #
-  #   A GitHub Project site exists in the `gh-pages` branch of one of your repositories.
-  #  REQUIRED! Set BASE_PATH to: http://username.github.io/project-name
-  #
-  # CAUTION:
-  #   - When in Localhost, your site will run from root "/" regardless of BASE_PATH
-  #   - Only the following values are falsy: ["", null, false]
-  #   - When setting BASE_PATH it must be a valid url.
-  #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : false
+# Outputting
+permalink:     date
+paginate_path: /page:num
+timezone:      null
 
-  # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
-  # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
-  #
-  # Override this by defining an absolute path to assets here.
-  # ex: 
-  #   http://s3.amazonaws.com/yoursite/themes/watermelon
-  #   /assets
-  #
-  ASSET_PATH : false
-  IMAGE_PATH : false
 
-  # These paths are to the main pages Jekyll-Bootstrap ships with.
-  # Some JB helpers refer to these paths; change them here if needed.
-  #
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
-  messages_path : /messages.html
-  about_path : /about.html
-  book_path : /book.html
+#Site config
+title: Jekyll Theme
+description: Just another Jekyll theme design and code by zhanxin.info.
+keywords: Jekyll Theme
+url: http://wentaotang.github.io
+feed: /atom.xml
+favicon: http://jekyllrb.com/favicon.png
 
-  # Settings for comments helper
-  # Set 'provider' to the comment provider you want to use.
-  # Set 'provider' to false to turn commenting off globally.
-  #
-  comments :
-    provider : duoshuo
-    duoshuo :
-      short_name : wentaotang
-    disqus :
-      short_name : wentaotang
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
+#Nav config
+nav:
+  - text: 首页
+    url: /index.html
+  - text: 分类目录 
+    url: /categories.html
+  - text: 文章归档
+    url: /archives.html
+  - text: 联系我
+    url: /contact.html
+  - text: 友情链接
+    url: /links.html
 
-  # Settings for analytics helper
-  # Set 'provider' to the analytics provider you want to use.
-  # Set 'provider' to false to turn analytics off globally.
-  #        
-  analytics :
-    provider : false
-    baidu :
-      tracking_id : '3Fbf82a1a79f3b6b657f7aeb6035cb6d1a' 
-    google : 
-      tracking_id : 'UA-41189818-1'
-    getclicky :
-      site_id : 
-    mixpanel :
-      token : '_MIXPANEL_TOKEN_'
+#Author config
+author:
+    name: 掌心
+    email: zhanxin.info@gmail.com
+    imageLink: http://tp2.sinaimg.cn/1832671293/180/40020872447/1
+    simpleIntro: 我是「展新展新」，一个矛盾体的化身，在你的掌心里。
+    detailIntro:
+      <p>Jekyll 是一个简洁的、特别针对博客平台的 静态网站 生成器。它使用一个模板目录作为网站布局的基础框架，并在其上运行 Textile 、 Markdown 或 Liquid 标记语言的转换器，最终生成一个完整的静态Web站点，可以被放置在Apache或者你喜欢的其他任何Web服务器上。它同时也是 GitHub Pages 、一个由 GitHub 提供的用于托管项目主页或博客的服务，在后台所运行的引擎。</p>
+      <p>很早之前，使用过 wordpress 来写博客。但是还要处理很多的底层问题。而使用 Jekyll 来写博客，可以很简单，写 Markdown 就好。然而，Jekyll 还很年轻，没有很多主题的支持。这里的主题，就是为 Jekyll 而写的。希望你能喜欢。</p>
 
-  # Settings for sharing helper. 
-  # Sharing is for things like tweet, plusone, like, reddit buttons etc.
-  # Set 'provider' to the sharing provider you want to use.
-  # Set 'provider' to false to turn sharing off globally.
-  #
-  sharing :
-    provider : false
+#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
+follow:
+  - class: icon-rss
+    url: /atom.xml
+  - class: icon-weibo
+    url: http://weibo.com/p/1005052012516323
+  - class: icon-github-alt
+    url: https://github.com/wentaotang
 
-  # Settings for all other include helpers can be defined by creating 
-  # a hash with key named for the given helper. ex:
-  #
-  #   pages_list :
-  #     provider : "custom"   
-  #
-  # Setting any helper's provider to 'custom' will bypass the helper code
-  # and include your custom code. Your custom file must be defined at:
-  #   ./_includes/custom/[HELPER]
-  # where [HELPER] is the name of the helper you are overriding.
+#Links
+customLinks:
+  - item:
+    - text: 掌心
+      url: http://www.zhanxin.info
+    - text: Jekyll
+      url: http://jekyllrb.com
+    - text: Jekyll Theme
+      url: http://www.zhanxin.info/themes.html
+    message: Friends
+  - item:
+    - text: Font Awesome
+      url: http://fortawesome.github.io/Font-Awesome/
+    - text: Google Font
+      url: http://www.google.com/fonts/
+    - text: jQuery
+      url: http://jquery.com/
+    message: 其他相关链接
+
+#googleAnaly, your id link UA-12345678-X
+googleAnaly:
+  config: true
+  id: UA-40169250-1
+
+#comment config
+disqus:
+  config: false
+  id: piznblog
+
+duoshuo:
+  config: true
+  id: wentaotang
