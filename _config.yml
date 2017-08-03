@@ -43,9 +43,9 @@ timezone:      null
 title: Jekyll Theme
 description: Just another Jekyll theme design and code by zhanxin.info.
 keywords: Jekyll Theme
-url: http://wentaotang.github.io
+url: https://wentaotang.github.io
 feed: /atom.xml
-favicon: http://jekyllrb.com/favicon.png
+favicon: https://jekyllrb.com/favicon.png
 
 #Nav config
 nav:
@@ -85,11 +85,11 @@ customLinks:
     message: Friends
   - item:
     - text: Font Awesome
-      url: http://fortawesome.github.io/Font-Awesome/
+      url: https://fortawesome.github.io/Font-Awesome/
     - text: Google Font
-      url: http://www.google.com/fonts/
+      url: https://www.google.com/fonts/
     - text: jQuery
-      url: http://jquery.com/
+      url: https://jquery.com/
     message: 其他相关链接
 
 #googleAnaly, your id link UA-12345678-X
